@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Rendy Ardian",
+    "description": "Saya benar-benar menikmati perjalanan saya ke Muara Mbaduk dan saya sangat  merekomendasikan tempat ini untuk semua orang yang mencari pengalaman wisata yang berbeda dan menarik di Banyuwangi.",
+    "image": "/testimony/muarambaduk-testimoni-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Galuh Dwi",
+    "description": "Sangat terkesan dengan fasilitas dan pelayanan yang diberikan di Wisata Alam Muara Mbaduk. Camping di sini memberikan pengalaman yang tak terlupakan. Suasana yang damai dan alam yang mempesona membuat liburan ini benar-benar sempurna. Saya akan merekomendasikan tempat ini kepada teman-teman saya.",
+    "image": "/testimony/muarambaduk-testimoni-2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Fika Kartin",
+    "description": "Berkemah di Wisata Alam Muara Mbaduk benar-benar menakjubkan. Pemandangan yang indah, aktivitas petualangan, dan fasilitas   yang lengkap membuat perjalanan ini sangat menyenangkan. Saya sangat senang bisa mengunjungi tempat ini dan pasti akan kembali.",
+    "image": "/testimony/muarambaduk-testimoni-3.jpg"
+  }
+]

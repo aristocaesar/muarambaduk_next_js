@@ -1,0 +1,38 @@
+[
+  {
+    "id": "bf5f6ed4-e65a-43b1-9b8b-79a1998e491b",
+    "description": "Setiap pengunjung wajib membayar tiket masuk sebelum masuk ke kawasan wisata Muara Mbaduk. Harga tiket masuk dapat berbeda-beda tergantung pada kategori pengunjung, seperti warga lokal atau wisatawan asing."
+  },
+  {
+    "id": "8a81b0d1-0477-46d8-b4e3-4b4f88d2cc19",
+    "description": "Setiap pengunjung diharuskan mengikuti peraturan dan instruksi yang diberikan oleh petugas kawasan wisata, termasuk menjaga kebersihan lingkungan dan tidak merusak flora dan fauna di sekitar kawasan wisata."
+  },
+  {
+    "id": "f9d34852-8b7c-45b5-9b9c-7f2c84fc53b7",
+    "description": "Aktivitas yang dapat membahayakan keselamatan diri dan pengunjung lainnya, seperti memancing di daerah yang dilarang, atau mendekati ombak yang berbahaya, dilarang keras."
+  },
+  {
+    "id": "1f1b14c3-9d9d-4ee7-8b93-6f597f43c115",
+    "description": "Setiap pengunjung diharapkan mengikuti jam operasional yang telah ditentukan oleh pihak kawasan wisata. Jam operasional dapat berbeda-beda tergantung pada musim atau hari libur nasional."
+  },
+  {
+    "id": "fe336066-7103-48ab-8525-885fe51c44f0",
+    "description": "Dilarang membawa barang-barang berbahaya atau bahan-bahan yang ilegal ke dalam kawasan wisata Muara Mbaduk."
+  },
+  {
+    "id": "3b8db376-68c5-4ed3-9915-2957cb8e4a1e",
+    "description": "Dilarang melakukan kegiatan yang merusak keindahan alam, seperti membuang sampah sembarangan, merusak terumbu karang, atau melakukan kegiatan yang merusak flora dan fauna."
+  },
+  {
+    "id": "bc6fc227-61df-4572-9f65-00b47b5a61a3",
+    "description": "Setiap pengunjung diharapkan menghormati budaya dan adat istiadat setempat serta tidak melakukan kegiatan yang melanggar hukum dan norma sosial."
+  },
+  {
+    "id": "70887e68-bb5b-46c5-8895-3c1d3ef2f110",
+    "description": "Pihak kawasan wisata Muara Mbaduk berhak untuk membatalkan tiket masuk dan mengusir pengunjung yang melanggar aturan dan ketentuan yang telah ditetapkan."
+  },
+  {
+    "id": "8f7d8c74-bdf4-4f9b-b524-2c72e6cc00c9",
+    "description": "Pengunjung diharapkan mematuhi protokol kesehatan yang telah ditetapkan oleh pihak kawasan wisata termasuk memakai masker dan menjaga jarak sosial untuk mencegah penyebaran COVID-19."
+  }
+]
