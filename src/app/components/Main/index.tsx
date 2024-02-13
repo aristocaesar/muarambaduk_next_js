@@ -1,20 +1,23 @@
-import { ReactNode } from "react";
-import Footer from "../Footer";
-import NavBar from "../NavBar";
+import { ReactNode } from 'react';
+import Footer from '../Footer';
+import NavBar from '../NavBar';
 
 interface MainLayoutProps {
-    title? : string
-    children : ReactNode
+  data?: {
+    title?: string;
+    heading?: string;
+  };
+  children: ReactNode;
 }
 
-const MainLayout : React.FC<MainLayoutProps> = ({title, children}) => {
-    return <>
-        <NavBar title={title} />
-            <main>
-                {children}
-            </main>
-        <Footer />
+const MainLayout: React.FC<MainLayoutProps> = ({ data, children }) => {
+  return (
+    <>
+      <NavBar data={data} />
+      <main>{children}</main>
+      <Footer />
     </>
-}
+  );
+};
 
 export default MainLayout;

@@ -1,12 +1,19 @@
-import { Products } from "./products";
+type Product = {
+  id: number;
+  name: string;
+  quantity: number;
+};
 
 export type Package = {
-    id : string;
-    title : string;
-    slug : string;
-    category : string;
-    description : string;
-    price : number;
-    image : string;
-    products : Products[];
-}
+  id: number;
+  title: {
+    rendered: string;
+  };
+  slug: string;
+  featured_media: string | null;
+  price: number;
+  content: {
+    rendered: string;
+  };
+  products: Product[];
+};

@@ -1,26 +1,27 @@
-import { Metadata } from "next";
-import Article from "../components/Article";
-import SyaratKetentuanData from "../data/syarat-kententuan.json";
-import ListItem from "../components/ListItem/item";
-import MainLayout from "../components/Main";
+import { Metadata } from 'next';
+import Article from '../components/Article';
+import MainLayout from '../components/Main';
+import MUARAMBADUK_API from '../config/Muarambaduk_API';
+import { Pages } from '../types/pages';
+import Empty from '../components/Empty';
 
 export const metadata: Metadata = {
-    title: 'Muarambaduk Camping Ground - Syarat dan Ketentuan',
-}  
+  title: 'Muarambaduk Camping Ground - Syarat dan Ketentuan',
+};
 
-const SyaratKetentuan : React.FC = () => {
-    return <MainLayout title="Syarat dan Ketentuan">
-        <Article>
-            <h3 className="font-bold mb-5">Berikut adalah syarat dan ketentuan yang berlaku pada wisata Muara Mbaduk Banyuwangi:</h3>
-            <ul className="space-y-5 list-disc ml-4">
-                {
-                    SyaratKetentuanData.map((item, index) => {
-                        return <ListItem key={index} value={item.description} />
-                    })
-                }
-            </ul>
-        </Article>
+const SyaratKetentuan: React.FC = async () => {
+  const TermCondition: Pages[] = await MUARAMBADUK_API.Get(
+    'pages?slug=syarat-dan-ketentuan'
+  ).catch(() => []);
+  return (
+    <MainLayout data={{ title: 'Syarat dan Ketentuan' }}>
+      {TermCondition.length == 0 ? (
+        <Empty />
+      ) : (
+        <Article isContent isHtml={TermCondition[0].content.rendered}></Article>
+      )}
     </MainLayout>
-}
+  );
+};
 
 export default SyaratKetentuan;

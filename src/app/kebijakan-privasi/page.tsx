@@ -1,26 +1,27 @@
-import { Metadata } from "next";
-import ListItem from "../components/ListItem/item";
-import Article from "../components/Article";
-import KebijakanPrivasiData from "../data/kebijakan-privasi.json"
-import MainLayout from "../components/Main";
+import { Metadata } from 'next';
+import Article from '../components/Article';
+import MainLayout from '../components/Main';
+import { Pages } from '../types/pages';
+import MUARAMBADUK_API from '../config/Muarambaduk_API';
+import Empty from '../components/Empty';
 
 export const metadata: Metadata = {
-    title: 'Muarambaduk Camping Ground - Kebijakan Privasi',
-}  
+  title: 'Muarambaduk Camping Ground - Kebijakan Privasi',
+};
 
-const KebijakanPrivasi : React.FC = () => {
-    return <MainLayout title="Kebijakan Privasi">
-        <Article>
-            <h3 className="font-bold mb-5">Berikut adalah kebijakan privasi yang berlaku pada wisata Muara Mbaduk Banyuwangi:</h3>
-            <ul className="space-y-5 list-disc ml-4">
-                {
-                    KebijakanPrivasiData.map((item, index) => {
-                        return <ListItem key={index} value={item.description} />
-                    })
-                }
-            </ul>
-        </Article>
+const KebijakanPrivasi: React.FC = async () => {
+  const PrivacyPolicy: Pages[] = await MUARAMBADUK_API.Get(
+    'pages/?slug=kebijakan-privasi'
+  ).catch(() => []);
+  return (
+    <MainLayout data={{ title: 'Kebijakan Privasi' }}>
+      {PrivacyPolicy.length == 0 ? (
+        <Empty />
+      ) : (
+        <Article isContent isHtml={PrivacyPolicy[0].content.rendered}></Article>
+      )}
     </MainLayout>
-}
+  );
+};
 
 export default KebijakanPrivasi;

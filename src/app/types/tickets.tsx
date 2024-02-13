@@ -1,7 +1,17 @@
+type TicketDetail = {
+  id: number;
+  name: string;
+  price: number;
+};
+
 export type Ticket = {
-    "id": string,
-    "title": string,
-    "category": string,
-    "normal_day": number,
-    "weekend_day": number
-}
+  id: number;
+  title: {
+    rendered: string;
+  };
+  categories: {
+    id: number;
+    name: string;
+  };
+  detail: TicketDetail[];
+};

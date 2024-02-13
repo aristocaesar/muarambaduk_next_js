@@ -1,5 +1,9 @@
-export type Faq = {
-    "id": string
-    "title": string
-    "description": string
-}
+export type Faqs = {
+  id: number;
+  title: {
+    rendered: string;
+  };
+  content: {
+    rendered: string;
+  };
+};
