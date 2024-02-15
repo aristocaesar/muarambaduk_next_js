@@ -1,12 +1,9 @@
-import axios from 'axios';
-
 class MUARAMBADUK_API {
   private static URL = process.env.API_HOST;
 
   public static async Get(url: string) {
-    return await axios
-      .get(`${this.URL}/${url}`)
-      .then((result) => result.data)
+    return await fetch(`${this.URL}/${url}`, { cache: 'no-store' })
+      .then((result) => result.json())
       .catch((err) => {
         throw new Error(err);
       });
