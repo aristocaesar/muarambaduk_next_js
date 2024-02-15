@@ -8,16 +8,13 @@ export const metadata: Metadata = {
   title: 'Muarambaduk Camping Ground - Tentang',
 };
 
-async function getAbout() {
-  const About: Pages[] = await MUARAMBADUK_API.Get('pages?slug=tentang-kami');
-  return About[0];
-}
-
 const Tentang: React.FC = async () => {
-  const About: Pages = await getAbout();
+  const About: Pages[] = await MUARAMBADUK_API.Get(
+    'pages?slug=tentang-kami'
+  ).catch(() => []);
   return (
     <MainLayout data={{ title: 'Tentang Kami' }}>
-      <Article isContent isHtml={About.content.rendered}></Article>
+      <Article isContent isHtml={About[0].content.rendered}></Article>
     </MainLayout>
   );
 };
