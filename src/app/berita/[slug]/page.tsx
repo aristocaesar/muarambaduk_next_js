@@ -37,7 +37,7 @@ const DetailBerita: React.FC<DetailBeritaProps> = async ({ params }) => {
       }}
     >
       <Article isContent>
-        <div className="relative w-full h-[400px] mb-10 rounded-md">
+        <div className="relative w-full h-[200px] md:h-[400px] mb-10 rounded-md">
           <Image
             src={
               _NewsDetail[0].featured_media == null ||

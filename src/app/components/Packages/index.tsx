@@ -20,7 +20,7 @@ const Packages: React.FC<PackagesProps> = async ({
   return (
     <Section id="paket" colorfull>
       <div className="container">
-        {withHeading ? (
+        {withHeading && (
           <div className="flex flex-col items-center mb-14">
             <h3 className="sm:text-center text-cod-gray-950 text-[1.6rem] md:text-[2rem] font-semibold max-w-md">
               Kami menyediakan <span className="text-denim-600">paket</span>{' '}
@@ -31,8 +31,6 @@ const Packages: React.FC<PackagesProps> = async ({
               berbagai kebutuhanya
             </p>
           </div>
-        ) : (
-          <></>
         )}
         {PackagesData.length == 0 ? (
           <Empty withSpace={false} message="Belum Ada Paket Yang Tersedia" />
@@ -43,7 +41,7 @@ const Packages: React.FC<PackagesProps> = async ({
             }).reverse()}
           </div>
         )}
-        {withCustomInformation != undefined && <CustomInformation />}
+        {withCustomInformation && <CustomInformation />}
       </div>
     </Section>
   );

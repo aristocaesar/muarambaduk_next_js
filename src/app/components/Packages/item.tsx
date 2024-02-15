@@ -1,16 +1,20 @@
 import { Package } from '@/app/types/packages';
 import Currency from '@/app/utils/Currency';
+import classNames from 'classnames';
 import FeatherIcon from 'feather-icons-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 interface PackageItemProps {
   data: Package;
+  className?: string;
 }
 
-const PackageItem: React.FC<PackageItemProps> = ({ data }) => {
+const PackageItem: React.FC<PackageItemProps> = ({ data, className }) => {
   return (
-    <div className="rounded-md drop-shadow-sm bg-white-50">
+    <div
+      className={classNames('rounded-md drop-shadow-sm bg-white-50', className)}
+    >
       <div className="relative w-[100%] h-[300px] rounded-t-md">
         <Image
           src={

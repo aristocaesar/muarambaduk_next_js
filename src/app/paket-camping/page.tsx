@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import MainLayout from '../components/Main';
-import Packages from '../components/Packages';
+import PackagesItemsOnly from '../components/Packages/itemsOnly';
 
 export const metadata: Metadata = {
   title: 'Muarambaduk Camping Ground - Paket Camping',
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const Paket: React.FC = () => {
   return (
     <MainLayout data={{ title: 'Paket Camping' }}>
-      <Packages withCustomInformation />
+      <PackagesItemsOnly />
     </MainLayout>
   );
 };
