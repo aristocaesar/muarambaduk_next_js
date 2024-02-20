@@ -1,14 +1,14 @@
-import MainLayout from '@/app/components/Main';
-import { Package } from '@/app/types/packages';
-import NotFound from '@/app/not-found';
-import Currency from '@/app/utils/Currency';
-import Link from 'next/link';
-import Article from '@/app/components/Article';
-import Image from 'next/image';
-import MUARAMBADUK_API from '@/app/config/Muarambaduk_API';
-import { Metadata } from 'next';
-import FeatherIcon from 'feather-icons-react';
-import { Ucword } from '@/app/utils/String/Strings';
+import MainLayout from "@/app/components/Main";
+import { Package } from "@/app/types/packages";
+import NotFound from "@/app/not-found";
+import Currency from "@/app/utils/Currency";
+import Link from "next/link";
+import Article from "@/app/components/Article";
+import Image from "next/image";
+import MUARAMBADUK_API from "@/app/config/Muarambaduk_API";
+import { Metadata } from "next";
+import FeatherIcon from "feather-icons-react";
+import { Ucword } from "@/app/utils/String/Strings";
 
 interface DetailPaketProps {
   params: {
@@ -19,8 +19,31 @@ interface DetailPaketProps {
 export async function generateMetadata({
   params,
 }: DetailPaketProps): Promise<Metadata> {
+  const result: Package[] = await MUARAMBADUK_API.Get(
+    `packages?slug=${params.slug}`
+  );
+  const _package: Package = result[0];
+
+  if (!result)
+    return {
+      title: `Muarambaduk Camping Ground Banyuwangi - Halaman Tidak Ditemukan`,
+      description: `Maaf, halaman yang Anda cari tidak ditemukan. Jangan khawatir, temukan informasi atau navigasi lainnya untuk melanjutkan eksplorasi situs kami. Temukan pengalaman baru dan menarik di muara mbaduk.`,
+    };
+
   return {
-    title: `Muarambaduk Camping Ground - ${Ucword(params.slug)}`,
+    title: `Muarambaduk Camping Ground Banyuwangi - ${Ucword(params.slug)}`,
+    description: `${_package.content.rendered}`,
+    metadataBase: new URL(
+      _package.featured_media ?? `${process.env.BASE_URL}/muarambaduk.png`
+    ),
+    openGraph: {
+      title: `Muarambaduk Camping Ground Banyuwangi - ${Ucword(params.slug)}`,
+      description: `${_package.content.rendered}`,
+      images: {
+        url:
+          _package.featured_media ?? `${process.env.BASE_URL}/muarambaduk.png`,
+      },
+    },
   };
 }
 
@@ -43,8 +66,8 @@ const DetailPaket: React.FC<DetailPaketProps> = async ({ params }) => {
               <Image
                 src={
                   _package.featured_media == null ||
-                  _package.featured_media == ''
-                    ? '/default-image.png'
+                  _package.featured_media == ""
+                    ? "/default-image.png"
                     : _package.featured_media
                 }
                 alt={_package.title.rendered}
@@ -68,7 +91,7 @@ const DetailPaket: React.FC<DetailPaketProps> = async ({ params }) => {
               ></div>
               <Link
                 href={
-                  process.env.NEXT_PUBLIC_RESERVATION_LINK?.toString() || '/'
+                  process.env.NEXT_PUBLIC_RESERVATION_LINK?.toString() || "/"
                 }
                 target="_blank"
                 className="flex justify-center items-center space-x-2 bg-denim-600 hover:bg-denim-700 focus:bg-denim-700 text-white-50 py-3 max-w-[14.5rem] rounded-sm mb-10"

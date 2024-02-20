@@ -8,9 +8,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Muarambaduk Camping Ground",
+  title: "Muarambaduk Camping Ground Banyuwangi",
   description:
-    "Muara Mbaduk adalah kawasan wisata alam di banyuwangi yang menyajikan pemandangan pantai, perbukitan hingga tempat berkemah",
+    "Wisata Muara Mbaduk Camping Ground Banyuwangi adalah surga alam yang memukau dengan keindahan pantai, perbukitan, dan fasilitas perkemahan, menciptakan pengalaman luar biasa bagi pecinta alam yang ingin menikmati keindahan alam.",
   keywords: [
     "muara",
     "mbaduk",
@@ -22,7 +22,22 @@ export const metadata: Metadata = {
   ],
   authors: {
     name: "PT. Sarongan Tourism IDN",
-    url: "https://www.muarambaduk.com",
+    url: `${process.env.BASE_URL}`,
+  },
+  metadataBase: new URL(`${process.env.BASE_URL}/muarambaduk.png`),
+  openGraph: {
+    siteName: "Muarambaduk Camping Ground Banyuwangi",
+    type: "website",
+    url: `${process.env.BASE_URL}`,
+    countryName: "id",
+    locale: "id_ID",
+    alternateLocale: "en_US",
+    title: "Muarambaduk Camping Ground Banyuwangi",
+    description:
+      "Wisata Muara Mbaduk Camping Ground Banyuwangi adalah surga alam yang memukau dengan keindahan pantai, perbukitan, dan fasilitas perkemahan, menciptakan pengalaman luar biasa bagi pecinta alam yang ingin menikmati keindahan alam.",
+    images: {
+      url: `${process.env.BASE_URL}/muarambaduk.png`,
+    },
   },
 };
 

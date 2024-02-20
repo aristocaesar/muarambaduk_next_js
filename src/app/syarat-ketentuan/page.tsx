@@ -1,20 +1,20 @@
-import { Metadata } from 'next';
-import Article from '../components/Article';
-import MainLayout from '../components/Main';
-import MUARAMBADUK_API from '../config/Muarambaduk_API';
-import { Pages } from '../types/pages';
-import Empty from '../components/Empty';
+import { Metadata } from "next";
+import Article from "../components/Article";
+import MainLayout from "../components/Main";
+import MUARAMBADUK_API from "../config/Muarambaduk_API";
+import { Pages } from "../types/pages";
+import Empty from "../components/Empty";
 
 export const metadata: Metadata = {
-  title: 'Muarambaduk Camping Ground - Syarat dan Ketentuan',
+  title: "Muarambaduk Camping Ground Banyuwangi - Syarat dan Ketentuan",
 };
 
 const SyaratKetentuan: React.FC = async () => {
   const TermCondition: Pages[] = await MUARAMBADUK_API.Get(
-    'pages?slug=syarat-dan-ketentuan'
+    "pages?slug=syarat-dan-ketentuan"
   ).catch(() => []);
   return (
-    <MainLayout data={{ title: 'Syarat dan Ketentuan' }}>
+    <MainLayout data={{ title: "Syarat dan Ketentuan" }}>
       {TermCondition.length == 0 ? (
         <Empty />
       ) : (

@@ -1,12 +1,12 @@
-import Article from '@/app/components/Article';
-import MainLayout from '@/app/components/Main';
-import MUARAMBADUK_API from '@/app/config/Muarambaduk_API';
-import NotFound from '@/app/not-found';
-import { NewsType } from '@/app/types/news';
-import DateWFormat from '@/app/utils/Date/format';
-import { Ucword } from '@/app/utils/String/Strings';
-import { Metadata } from 'next';
-import Image from 'next/image';
+import Article from "@/app/components/Article";
+import MainLayout from "@/app/components/Main";
+import MUARAMBADUK_API from "@/app/config/Muarambaduk_API";
+import NotFound from "@/app/not-found";
+import { NewsType } from "@/app/types/news";
+import DateWFormat from "@/app/utils/Date/format";
+import { Ucword } from "@/app/utils/String/Strings";
+import { Metadata } from "next";
+import Image from "next/image";
 
 interface DetailBeritaProps {
   params: {
@@ -41,14 +41,14 @@ const DetailBerita: React.FC<DetailBeritaProps> = async ({ params }) => {
           <Image
             src={
               _NewsDetail[0].featured_media == null ||
-              _NewsDetail[0].featured_media == ''
-                ? '/default-image.png'
+              _NewsDetail[0].featured_media == ""
+                ? "/default-image.png"
                 : _NewsDetail[0].featured_media
             }
             alt={_NewsDetail[0].title.rendered}
             fill
             style={{
-              objectFit: 'cover',
+              objectFit: "cover",
             }}
             className="rounded-md"
           />
