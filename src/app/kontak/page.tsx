@@ -1,15 +1,22 @@
-import { Metadata } from "next";
-import MainLayout from "../components/Main";
-import Article from "../components/Article";
-import FeatherIcon from "feather-icons-react";
+import { Metadata } from 'next';
+import MainLayout from '../components/Main';
+import Article from '../components/Article';
+import FeatherIcon from 'feather-icons-react';
 
 export const metadata: Metadata = {
-  title: "Muarambaduk Camping Ground Banyuwangi - Kontak",
+  title: 'Muarambaduk Camping Ground Banyuwangi - Kontak',
+  description:
+    'Hubungi kami di Muara Mbaduk Camping Ground Banyuwangi untuk pertanyaan, reservasi, atau informasi tambahan. Tim kami siap membantu Anda menjelajahi keindahan alam dan menawarkan pengalaman camping yang tak terlupakan. Segera hubungi kami untuk merencanakan petualangan Anda di destinasi wisata alam yang menakjubkan ini.',
+  openGraph: {
+    title: 'Muarambaduk Camping Ground Banyuwangi - Kontak',
+    description:
+      'Hubungi kami di Muara Mbaduk Camping Ground Banyuwangi untuk pertanyaan, reservasi, atau informasi tambahan. Tim kami siap membantu Anda menjelajahi keindahan alam dan menawarkan pengalaman camping yang tak terlupakan. Segera hubungi kami untuk merencanakan petualangan Anda di destinasi wisata alam yang menakjubkan ini.',
+  },
 };
 
 const Kontak: React.FC = () => {
   return (
-    <MainLayout data={{ title: "Kontak" }}>
+    <MainLayout data={{ title: 'Kontak' }}>
       <Article>
         <div className="flex justify-center">
           <div className="gap-y-10 xl:gap-y-0 xl:gap-x-14">
@@ -31,7 +38,7 @@ const Kontak: React.FC = () => {
                   />
                   <p className="text-cod-gray-950 w-10/12">
                     Jln.Sukamade No.234, Dsn. Krajan Desa Sarongan Kec.
-                    Pesanggaran , Kab. Banyuwangi{" "}
+                    Pesanggaran , Kab. Banyuwangi{' '}
                   </p>
                 </div>
                 <div className="flex items-center space-x-5">

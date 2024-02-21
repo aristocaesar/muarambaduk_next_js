@@ -27,14 +27,14 @@ const NewsItem: React.FC<NewsItemProps> = ({ data }) => {
       </div>
       <div className="p-[1.13rem] space-y-[0.58rem]">
         <span className="text-cod-gray-300">{DateWFormat(data.date)}</span>
-        <h1 className="text-sm md:text-base">
+        <h3 className="text-sm md:text-base">
           <Link
             className="font-semibold text-cod-gray-950 hover:text-cod-gray-700 text-[0.9rem] md:text-[1.1rem]"
             href={`berita/${data.slug}`}
           >
             {data.title.rendered}
           </Link>
-        </h1>
+        </h3>
         <div
           className="text-cod-gray-300"
           dangerouslySetInnerHTML={{

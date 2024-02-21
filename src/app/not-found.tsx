@@ -1,7 +1,13 @@
 import Link from 'next/link';
 import MainLayout from './components/Main';
+import { Metadata } from 'next';
 
-function NotFound() {
+export const metadata: Metadata = {
+  title: `Muarambaduk Camping Ground Banyuwangi - Halaman Tidak Ditemukan`,
+  description: `Maaf, halaman yang Anda cari tidak ditemukan. Jangan khawatir, temukan informasi atau navigasi lainnya untuk melanjutkan eksplorasi situs kami. Temukan pengalaman baru dan menarik di muara mbaduk.`,
+};
+
+export default function NotFound() {
   return (
     <MainLayout>
       <div className="container flex flex-col py-24 space-y-5 justify-center items-center text-cod-gray-950">
@@ -19,5 +25,3 @@ function NotFound() {
     </MainLayout>
   );
 }
-
-export default NotFound;

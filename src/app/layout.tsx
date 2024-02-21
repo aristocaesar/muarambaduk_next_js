@@ -1,40 +1,40 @@
-import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Poppins } from 'next/font/google';
+import './globals.css';
 
 const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
 export const metadata: Metadata = {
-  title: "Muarambaduk Camping Ground Banyuwangi",
+  title: 'Muarambaduk Camping Ground Banyuwangi',
   description:
-    "Wisata Muara Mbaduk Camping Ground Banyuwangi adalah surga alam yang memukau dengan keindahan pantai, perbukitan, dan fasilitas perkemahan, menciptakan pengalaman luar biasa bagi pecinta alam yang ingin menikmati keindahan alam.",
+    'Wisata Muara Mbaduk Camping Ground Banyuwangi adalah surga alam yang memukau dengan keindahan pantai, perbukitan, dan fasilitas perkemahan, menciptakan pengalaman luar biasa bagi pecinta alam yang ingin menikmati keindahan alam.',
   keywords: [
-    "muara",
-    "mbaduk",
-    "muarambaduk",
-    "camping",
-    "camping ground",
-    "wisata alam",
-    "banyuwangi",
+    'muara',
+    'mbaduk',
+    'muarambaduk',
+    'camping',
+    'camping ground',
+    'wisata alam',
+    'banyuwangi',
   ],
   authors: {
-    name: "PT. Sarongan Tourism IDN",
+    name: 'PT. Sarongan Tourism IDN',
     url: `${process.env.BASE_URL}`,
   },
   metadataBase: new URL(`${process.env.BASE_URL}/muarambaduk.png`),
   openGraph: {
-    siteName: "Muarambaduk Camping Ground Banyuwangi",
-    type: "website",
+    siteName: 'Muarambaduk Camping Ground Banyuwangi',
+    type: 'website',
     url: `${process.env.BASE_URL}`,
-    countryName: "id",
-    locale: "id_ID",
-    alternateLocale: "en_US",
-    title: "Muarambaduk Camping Ground Banyuwangi",
+    countryName: 'id',
+    locale: 'id_ID',
+    alternateLocale: 'en_US',
+    title: 'Muarambaduk Camping Ground Banyuwangi',
     description:
-      "Wisata Muara Mbaduk Camping Ground Banyuwangi adalah surga alam yang memukau dengan keindahan pantai, perbukitan, dan fasilitas perkemahan, menciptakan pengalaman luar biasa bagi pecinta alam yang ingin menikmati keindahan alam.",
+      'Temukan Keindahan Alam dan Petualangan Seru di Muara Mbaduk Camping Ground, Banyuwangi. Nikmati Pemandangan Pantai, Perbukitan, dan Aktivitas Camping.',
     images: {
       url: `${process.env.BASE_URL}/muarambaduk.png`,
     },
